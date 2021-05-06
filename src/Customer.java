@@ -21,27 +21,27 @@ class Customer {
         double totalAmount = 0;
         int frequentRenterPoints = 0;
         Enumeration<Rental> enum_rentals = rentals.elements();
-        StringBuilder result = new StringBuilder("Rental Record for " + this.getName() + "\n");
-        result.append("\t" + "Title" + "\t" + "\t" + "Days" + "\t" + "Amount" + "\n");
+        String result = "Rental Record for " + this.getName() + "\n";
+        result += "\t" + "Title" + "\t" + "\t" + "Days" + "\t" + "Amount" + "\n";
 
         while (enum_rentals.hasMoreElements()) {
-            Rental each = enum_rentals.nextElement();
+            double thisAmount = 0;
+            Rental each = (Rental) enum_rentals.nextElement();
             //determine amounts for each line
-            double thisAmount = amountFor(each);
+            thisAmount = amountFor(each);
             // add frequent renter points
-            frequentRenterPoints++;
+            frequentRenterPoints ++;
             // add bonus for a two day new release rental
-            if ((each.getMovie().getPriceCode() == Movie.NEW_RELEASE) && each.getDaysRented() > 1) {
-                frequentRenterPoints++;
-            }
+            if ((each.getMovie().getPriceCode() == Movie.NEW_RELEASE) && each.getDaysRented() > 1)
+                frequentRenterPoints ++;
             //show figures for this rental
-            result.append("\t").append(each.getMovie().getTitle()).append("\t").append("\t").append(each.getDaysRented()).append("\t").append(thisAmount).append("\n");
+            result += "\t" + each.getMovie().getTitle()+ "\t" + "\t" + each.getDaysRented() + "\t" + String.valueOf(thisAmount) + "\n";
             totalAmount += thisAmount;
         }
         //add footer lines
-        result.append("Amount owed is ").append(totalAmount).append("\n");
-        result.append("You earned ").append(frequentRenterPoints).append(" frequent renter points");
-        return result.toString();
+        result += "Amount owed is " + String.valueOf(totalAmount) + "\n";
+        result += "You earned " + String.valueOf(frequentRenterPoints) + " frequent renter points";
+        return result;
     }
 
     private double amountFor(Rental each) {
