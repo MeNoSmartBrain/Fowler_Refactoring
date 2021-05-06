@@ -13,13 +13,13 @@ class Rental {
      * @param newmovie : Movie of rental
      * @param newdaysRented : Time since the rental began
      */
-    Rental(Movie newmovie, int newdaysRented) {
+    Rental(final Movie newmovie, final int newdaysRented) {
         movie = newmovie;
         daysRented = newdaysRented;
     }
 
     /**
-     * Getter-Function
+     * Getter-Function.
      * @return daysRented : Get the days since the rental began.
      */
     public int getDaysRented() {
@@ -27,7 +27,7 @@ class Rental {
     }
 
     /**
-     * Getter-Function
+     * Getter-Function.
      * @return movie : Get the movie that was rented.
      */
     public Movie getMovie() {
