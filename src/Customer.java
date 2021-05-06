@@ -5,11 +5,11 @@ class Customer {
     private final String name;
     private final Vector<Rental> rentals = new Vector<>();
 
-    Customer(String newname) {
-        name = newname;
+    Customer(final String newName) {
+        name = newName;
     }
 
-    public void addRental(Rental arg) {
+    public void addRental(final Rental arg) {
         rentals.addElement(arg);
     }
 
