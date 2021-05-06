@@ -1,8 +1,23 @@
 public class Movie {
-    public static final int CHILDRENS = 2;
+    /**
+     * CHILDREN const.
+     */
+    public static final int CHILDREN = 2;
+    /**
+     * REGULAR const.
+     */
     public static final int REGULAR = 0;
+    /**
+     * NEW_RELEASE const.
+     */
     public static final int NEW_RELEASE = 1;
+    /**
+     * title : Title of the movie.
+     */
     private final String title;
+    /**
+     * priceCode : Price of the film.
+     */
     private int priceCode;
 
     Movie(final String newTitle, final int newPriceCode) {
@@ -10,14 +25,26 @@ public class Movie {
         priceCode = newPriceCode;
     }
 
+    /**
+     * Getter-Function.
+     * @return priceCode : Price of Movie
+     */
     public int getPriceCode() {
         return priceCode;
     }
 
+    /**
+     * Setter-Function.
+     * @param arg Arg-Parameter
+     */
     public void setPriceCode(final int arg) {
         priceCode = arg;
     }
 
+    /**
+     * Getter-Function.
+     * @return title : Title of Movie
+     */
     public String getTitle() {
         return title;
     }

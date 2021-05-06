@@ -3,6 +3,18 @@ import java.util.Vector;
 
 class Customer {
     /**
+     * None magic THREE.
+     */
+    private static final int THREE = 3;
+    /**
+     * None magic TWO.
+     */
+    private static final int TWO = 2;
+    /**
+     * None magic ONE_FIVE.
+     */
+    private static final double ONE_FIVE = 1.5;
+    /**
      * name : Name of Customer.
      */
     private final String name;
@@ -54,18 +66,18 @@ class Customer {
         double thisAmount;
         switch (each.getMovie().getPriceCode()) {
             case Movie.REGULAR:
-                thisAmount = 2;
-                if (each.getDaysRented() > 2) {
-                    thisAmount += (each.getDaysRented() - 2) * 1.5;
+                thisAmount = TWO;
+                if (each.getDaysRented() > TWO) {
+                    thisAmount += (each.getDaysRented() - TWO) * ONE_FIVE;
                 }
                 break;
             case Movie.NEW_RELEASE:
-                thisAmount = each.getDaysRented() * 3;
+                thisAmount = each.getDaysRented() * THREE;
                 break;
-            case Movie.CHILDRENS:
-                thisAmount = 1.5;
-                if (each.getDaysRented() > 3) {
-                    thisAmount += (each.getDaysRented() - 3) * 1.5;
+            case Movie.CHILDREN:
+                thisAmount = ONE_FIVE;
+                if (each.getDaysRented() > THREE) {
+                    thisAmount += (each.getDaysRented() - THREE) * ONE_FIVE;
                 }
                 break;
             default:
