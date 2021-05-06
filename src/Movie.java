@@ -5,7 +5,7 @@ public class Movie {
     private final String title;
     private int priceCode;
 
-    public Movie(final String newTitle, final int newPriceCode) {
+    Movie(final String newTitle, final int newPriceCode) {
         title = newTitle;
         priceCode = newPriceCode;
     }
@@ -14,7 +14,7 @@ public class Movie {
         return priceCode;
     }
 
-    public void setPriceCode(int arg) {
+    public void setPriceCode(final int arg) {
         priceCode = arg;
     }
 
