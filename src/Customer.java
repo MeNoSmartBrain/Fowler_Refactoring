@@ -4,15 +4,19 @@ import java.util.Vector;
 class Customer {
     private final String name;
     private final Vector<Rental> rentals = new Vector<>();
+
     Customer(String newname) {
         name = newname;
     }
+
     public void addRental(Rental arg) {
         rentals.addElement(arg);
     }
+
     public String getName() {
         return name;
     }
+
     public String statement() {
         double totalAmount = 0;
         int frequentRenterPoints = 0;
@@ -41,23 +45,25 @@ class Customer {
     }
 
     private double amountFor(Rental each) {
-        double thisAmount = 0;
+        double thisAmount;
         switch (each.getMovie().getPriceCode()) {
             case Movie.REGULAR:
-                thisAmount += 2;
+                thisAmount = 2;
                 if (each.getDaysRented() > 2) {
                     thisAmount += (each.getDaysRented() - 2) * 1.5;
                 }
                 break;
             case Movie.NEW_RELEASE:
-                thisAmount += each.getDaysRented() * 3;
+                thisAmount = each.getDaysRented() * 3;
                 break;
             case Movie.CHILDRENS:
-                thisAmount += 1.5;
+                thisAmount = 1.5;
                 if (each.getDaysRented() > 3) {
                     thisAmount += (each.getDaysRented() - 3) * 1.5;
                 }
                 break;
+            default:
+                thisAmount = 0;
         }
         return thisAmount;
     }
