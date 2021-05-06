@@ -68,5 +68,4 @@ class Customer {
         }
         return thisAmount;
     }
-
 }
