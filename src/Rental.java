@@ -1,10 +1,10 @@
 class Rental {
     /**
-     * movie : Movie object
+     * movie : Movie object.
      */
     private Movie movie;
     /**
-     * daysRented : Time past of rental represented by an Integer
+     * daysRented : Time past of rental represented by an Integer.
      */
     private int daysRented;
 
@@ -13,14 +13,14 @@ class Rental {
      * @param newmovie : Movie of rental
      * @param newdaysRented : Time since the rental began
      */
-    public Rental(Movie newmovie, int newdaysRented) {
+    Rental(Movie newmovie, int newdaysRented) {
         movie = newmovie;
         daysRented = newdaysRented;
     }
 
     /**
      * Getter-Function
-     * @return daysRented : Get the days since the rental began
+     * @return daysRented : Get the days since the rental began.
      */
     public int getDaysRented() {
         return daysRented;
@@ -28,7 +28,7 @@ class Rental {
 
     /**
      * Getter-Function
-     * @return movie : Get the movie that was rented
+     * @return movie : Get the movie that was rented.
      */
     public Movie getMovie() {
         return movie;
