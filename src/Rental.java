@@ -11,11 +11,11 @@ class Rental {
     /**
      * Constructor for the Rental class with the two ...
      * @param newmovie : Movie of rental
-     * @param newdaysRented : Time since the rental began
+     * @param newDaysRented : Time since the rental began
      */
-    Rental(final Movie newmovie, final int newdaysRented) {
+    Rental(final Movie newmovie, final int newDaysRented) {
         movie = newmovie;
-        daysRented = newdaysRented;
+        daysRented = newDaysRented;
     }
 
     /**
