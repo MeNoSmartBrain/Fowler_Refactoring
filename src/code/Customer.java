@@ -1,7 +1,9 @@
+package code;
+
 import java.util.Enumeration;
 import java.util.Vector;
 
-class Customer {
+public class Customer {
     /**
      * None magic THREE.
      */
@@ -15,7 +17,7 @@ class Customer {
      */
     private static final double ONE_FIVE = 1.5;
     /**
-     * name : Name of Customer.
+     * name : Name of code.Customer.
      */
     private final String name;
     /**
@@ -23,7 +25,7 @@ class Customer {
      */
     private final Vector<Rental> rentals = new Vector<>();
 
-    Customer(final String newName) {
+    public Customer(final String newName) {
         name = newName;
     }
 

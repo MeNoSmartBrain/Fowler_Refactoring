@@ -1,3 +1,5 @@
+package code;
+
 public class Movie {
     /**
      * CHILDREN const.
@@ -20,14 +22,14 @@ public class Movie {
      */
     private int priceCode;
 
-    Movie(final String newTitle, final int newPriceCode) {
+   public  Movie(final String newTitle, final int newPriceCode) {
         title = newTitle;
         priceCode = newPriceCode;
     }
 
     /**
      * Getter-Function.
-     * @return priceCode : Price of Movie
+     * @return priceCode : Price of code.Movie
      */
     public int getPriceCode() {
         return priceCode;
@@ -43,7 +45,7 @@ public class Movie {
 
     /**
      * Getter-Function.
-     * @return title : Title of Movie
+     * @return title : Title of code.Movie
      */
     public String getTitle() {
         return title;

@@ -1,6 +1,8 @@
-class Rental {
+package code;
+
+public class Rental {
     /**
-     * movie : Movie object.
+     * movie : code.Movie object.
      */
     private Movie movie;
     /**
@@ -9,11 +11,11 @@ class Rental {
     private int daysRented;
 
     /**
-     * Constructor for the Rental class with the two ...
-     * @param newMovie : Movie of rental
+     * Constructor for the code.Rental class with the two ...
+     * @param newMovie : code.Movie of rental
      * @param newDaysRented : Time since the rental began
      */
-    Rental(final Movie newMovie, final int newDaysRented) {
+    public Rental(final Movie newMovie, final int newDaysRented) {
         movie = newMovie;
         daysRented = newDaysRented;
     }
